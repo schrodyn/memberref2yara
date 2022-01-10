@@ -271,7 +271,7 @@ rule memberRef_{}
     condition:
         uint16(0) == 0x5A4D
         and (uint32(uint32(0x3C)) == 0x00004550)
-        and and pe.data_directories[pe.IMAGE_DIRECTORY_ENTRY_COM_DESCRIPTOR].virtual_address != 0
+        and pe.data_directories[pe.IMAGE_DIRECTORY_ENTRY_COM_DESCRIPTOR].virtual_address != 0
         and uint32be(
             pe.rva_to_offset(
                 uint32(
